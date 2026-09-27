@@ -1,0 +1,13 @@
+# Бот работает через polling (CLI), веб-доступ не нужен.
+# На «Бигете» папку бота следует класть ВНЕ public_html.
+# Если папку когда-нибудь всё же отдаст веб-сервер — секреты, данные и
+# журналы закрыты, листинг директорий выключен:
+Options -Indexes
+
+<FilesMatch "\.php$">
+    Require all denied
+</FilesMatch>
+
+<FilesMatch "\.(htaccess|htpasswd|sqlite|sqlite3|sqlite-wal|sqlite-shm|sqlite-journal|db|log|env|pem|key|crt)$">
+    Require all denied
+</FilesMatch>

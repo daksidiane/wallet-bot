@@ -1,0 +1,11 @@
+# Секреты и данные БД — не должны попасть в git
+secrets.php
+
+# Локальная имитация БД (SQLite) и её журналы
+db/*.sqlite
+db/*.sqlite-journal
+db/*.sqlite-wal
+db/*.sqlite-shm
+
+# Логи
+logs/*.log
